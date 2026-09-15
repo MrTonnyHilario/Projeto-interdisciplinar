@@ -1,4 +1,4 @@
-package br.com.projetointerdisciplinar.copadomundo.copadomundo.entity;
+package br.com.projetointerdisciplinar.copadomundo.copadomundo.Entity;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;

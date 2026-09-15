@@ -1,4 +1,4 @@
-package br.com.projetointerdisciplinar.copadomundo.copadomundo.entity;
+package br.com.projetointerdisciplinar.copadomundo.copadomundo.Entity;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -12,8 +12,8 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 import java.time.LocalDateTime;
  
-@entity
-@noArgsConstructor
+@Entity
+@NoArgsConstructor
 @AllArgsConstructor
 @Setter
 @Getter
@@ -25,7 +25,7 @@ public class Jogo {
     @Column(nullable=false)
     private LocalDateTime dataJogo;
 
-    @collum(nullable=false, lengh= 50)
+    @Column(nullable=false, length= 50)
     private String localJogo;
 
     @JoinColumn(name="idSelecao_fk")

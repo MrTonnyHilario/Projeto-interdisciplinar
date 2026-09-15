@@ -1,4 +1,4 @@
-package br.com.projetointerdisciplinar.copadomundo.copadomundo.entity;
+package br.com.projetointerdisciplinar.copadomundo.copadomundo.Entity;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -10,7 +10,7 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 import jakarta.persistence.JoinColumn;
-import java.LocalDateTime;
+import java.time.LocalDate;
 
 @Entity
 @NoArgsConstructor
@@ -30,7 +30,7 @@ public class Jogador {
     private String posicaoJogador;
 
     @Column(nullable=false)
-    private LocalDateTime dataNascimentoJogador;
+    private LocalDate dataNascimentoJogador;
 
     @Column(nullable=false, length=30)
     private String alturaJogador;
