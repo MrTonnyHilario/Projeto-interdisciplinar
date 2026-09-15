@@ -1,0 +1,17 @@
+body{
+    background-image: url(/src/main/resources/templates/fotos/fundo.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.meu-cadastro{
+    background-color: rgb(44, 62, 80, 0.7);
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+    width: 400px;
+    height: auto !important;
+   margin-top: 300px;
+
+}  
