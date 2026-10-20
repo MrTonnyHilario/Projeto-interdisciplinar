@@ -33,7 +33,7 @@ public class JogadorControler {
     }
 
     @GetMapping("/adicionar")
-    public String mostrarFormularioAdicionar(Model model) {
+    public String Adicionar(Model model) {
         Jogador jogador = new Jogador();
         model.addAttribute("jogador", jogador);
         return "adicionar-jogador";

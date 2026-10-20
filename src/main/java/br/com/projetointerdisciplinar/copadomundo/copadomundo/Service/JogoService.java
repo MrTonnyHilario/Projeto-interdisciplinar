@@ -8,6 +8,7 @@ import org.springframework.stereotype.Service;
 import br.com.projetointerdisciplinar.copadomundo.copadomundo.Entity.Jogo;
 import br.com.projetointerdisciplinar.copadomundo.copadomundo.Repository.JogoRepository;
 
+@Service
 public class JogoService {
     
     @Autowired

@@ -10,7 +10,11 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 import jakarta.persistence.JoinColumn;
+import jakarta.persistence.ManyToOne;
+
 import java.time.LocalDate;
+
+import org.hibernate.annotations.ManyToAny;
 
 @Entity
 @NoArgsConstructor
@@ -35,9 +39,11 @@ public class Jogador {
     @Column(nullable=false, length=30)
     private String alturaJogador;
 
+    @ManyToOne
     @JoinColumn(name="idSelecao_fk")
     private Selecao selecao;
 
+    @ManyToOne
     @JoinColumn(name="idPais_fk")
     private Pais pais;
     
