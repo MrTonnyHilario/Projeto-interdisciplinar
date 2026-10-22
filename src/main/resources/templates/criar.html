@@ -16,29 +16,67 @@
     </style>
 </head>
 <body>
-<div class="container d-flex justify-content-center align-items-center meu-cadastro">
-    <div>
-    <form action="#">
-        <div class="mb-3">
-            <label for="name" class="for-label"> Nome:</label>
-            <input type="text" 
-            class="for-control" 
-            id="nome" placeholder="Insira seu Nome">
-        </div>
-        <div class="mb-3">
-            <label for="email" class="for-label"> Email:</label>
-            <input type="email" 
-            class="for-control" 
-            id="email" placeholder="Insira seu email">
-        </div>
-        <div class="mb-3">
-            <label for="password" class="for-label"> Senha:</label>
-            <input type="password" 
-            class="for-control" 
-            id="senha" placeholder="Insira uma Senha">
-            </div>
-        </div>
-          <a class="btn btn-primary btn-lg"  href="/src/main/resources/templates/incial.html" role="button">Entrar</a>
-    </form>
-</div>
-</body>
+    <div class="d-flex justify-content-center align-items-center vh-100">
+      <div class="container meu-cadastro p-4 rounded shadow-sm" style="max-width: 450px;">
+        
+        <!-- Adicionado o ID no formulário para o JavaScript controlar -->
+        <form action="/src/main/resources/templates/incial.html" method="GET" id="formCadastro">
+          
+          <div class="mb-3">
+            <label for="nome" class="form-label">Nome:</label>
+            <input type="text" class="form-control" id="nome" placeholder="Insira seu Nome" required>
+          </div>
+          
+          <div class="mb-3">
+            <label for="email" class="form-label">Email:</label>
+            <!-- O id="email" será monitorado pelo JavaScript -->
+            <input type="email" class="form-control" id="email" placeholder="Insira seu email" required>
+            <!-- Mensagem de erro que aparece se o e-mail não existir -->
+            <div class="invalid-feedback">Este e-mail não está cadastrado no sistema.</div>
+            <div class="valid-feedback">E-mail verificado com sucesso!</div>
+          </div>
+          
+          <div class="mb-3">
+            <label for="senha" class="form-label">Senha:</label>
+            <input type="password" class="form-control" id="senha" placeholder="Insira uma Senha" required>
+          </div>
+          
+          <!-- O link <a> foi transformado em <button submit> e começa desativado (disabled) -->
+          <div class="d-grid mt-4">
+            <button type="submit" class="btn btn-primary btn-lg" id="btnEntrar" disabled>Entrar</button>
+          </div>
+          
+        </form>
+      </div>
+    </div>
+  
+    <!-- SCRIPT DE VALIDAÇÃO (Coloque antes de fechar a tag </body>) -->
+    <script>
+      // 1. Lista simulada de e-mails que já existem no seu banco de dados
+      const emailsCadastrados = ["teste@email.com", "usuario@gmail.com", "admin@sistema.com"];
+  
+      const emailInput = document.getElementById('email');
+      const btnEntrar = document.getElementById('btnEntrar');
+      const form = document.getElementById('formCadastro');
+  
+      // 2. Escuta quando o usuário digita no campo de e-mail
+      emailInput.addEventListener('input', function() {
+        const emailDigitado = emailInput.value.trim().toLowerCase();
+  
+        // Verifica se o e-mail digitado está na nossa lista de cadastrados
+        if (emailsCadastrados.includes(emailDigitado)) {
+          // Se existir, deixa o campo verde e ativa o botão
+          emailInput.classList.remove('is-invalid');
+          emailInput.classList.add('is-valid');
+          btnEntrar.disabled = false;
+        } else {
+          // Se não existir ou estiver em branco, deixa o campo vermelho e desativa o botão
+          emailInput.classList.remove('is-valid');
+          emailInput.classList.add('is-invalid');
+          btnEntrar.disabled = true;
+        }
+      });
+    </script>
+  </body>
+  
+</html>

@@ -10,15 +10,20 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div class="position-relative vh-100 align-items-center">
-<div class="container  d-flex justify-content-center align-items-center meu-cadastro">
-    <div class="d-grid gap-2">
+  <!-- Ajustado para d-flex e justify-content-center para centralizar perfeitamente o container na tela -->
+  <div class="position-relative vh-100 d-flex justify-content-center align-items-center">
     
-        <h1 class="text-white">Bem Vindo!</h1>
-    <a class="btn btn-primary btn-lg" href="/src/main/resources/templates/criar.html" role="button">Criar Conta</a>
-  <button type="button" class="btn btn-secondary btn-lg" href="#">Possui Conta</button>
+    <!-- Adicionado p-4 (padding) para criar o espaçamento interno e rounded para arredondar as bordas se tiver fundo -->
+    <div class="container d-flex justify-content-center align-items-center meu-cadastro p-4 rounded">
+      
+      <div class="d-grid gap-2">
+        <h1 class="text-white text-center mb-3">Bem Vindo!</h1>
+        <a class="btn btn-primary btn-lg" href="./criar.html" role="button">Possui Conta</a>
+       <a class="btn btn-secondary btn-lg"  href="./possui.html" role="button">Criar Conta</a>
+      </div>
+      
+    </div>  
   </div>
-</div>  
-</div>
 </body>
+
 </html>

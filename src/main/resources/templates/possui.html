@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>conta</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        label {
+            color:white
+        }
+    </style>
+</head>
+<body>
+    <div class="d-flex justify-content-center align-items-center vh-100">
+      <div class="container meu-cadastro p-4 rounded shadow-sm" style="max-width: 450px;">
+        
+        <!-- Adicionado o ID no formulário para o JavaScript controlar -->
+        <form action="/src/main/resources/templates/incial.html" method="GET" id="formCadastro">
+          
+          <div class="mb-3">
+            <label for="nome" class="form-label">Nome:</label>
+            <input type="text" class="form-control" id="nome" placeholder="Insira seu Nome" required>
+          </div>
+          
+          <div class="mb-3">
+            <label for="email" class="form-label">Email:</label>
+            <!-- O id="email" será monitorado pelo JavaScript -->
+            <input type="email" class="form-control" id="email" placeholder="Insira seu email" required>
+            <!-- Mensagem de erro que aparece se o e-mail não existir -->
+            <div class="invalid-feedback">Este e-mail não está cadastrado no sistema.</div>
+            <div class="valid-feedback">E-mail verificado com sucesso!</div>
+          </div>
+          
+          <div class="mb-3">
+            <label for="senha" class="form-label">Senha:</label>
+            <input type="password" class="form-control" id="senha" placeholder="Insira uma Senha" required>
+          </div>
+          
+          <!-- O link <a> foi transformado em <button submit> e começa desativado (disabled) -->
+          <div class="d-grid mt-4">
+            <button type="submit" class="btn btn-primary btn-lg" id="btnEntrar" disabled>Entrar</button>
+          </div>
+          
+        </form>
+      </div>
+    </div>
+  </body>
+  
+</html>
