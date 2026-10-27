@@ -1,0 +1,79 @@
+body{
+    margin: 0;
+    padding: 0;
+    background-image: url(/src/main/resources/templates/fotos/fundo.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.container-fluid {
+    width: 100%;
+}
+
+.row {
+    width: 100%;
+    margin: 0;
+    --bs-gutter-x: 10px;
+    --bs-gutter-y: 10px;
+}
+
+.titulo-copa {
+    margin: 30px 0 20px;
+    padding: 0 15px;
+    color: #fff;
+    font-size: 2rem;
+    text-align: center;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+}
+
+.bloco {
+    width: 100%;
+    height: 200px;
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    box-sizing: border-box;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.bloco h2 {
+    margin: 0;
+    color: #fff;
+    font-size: 1.5rem;
+}
+
+.meu-cadastro{
+    background-color: rgb(44, 62, 80, 0.7);
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+    width: 400px;
+    height: auto !important;
+   margin-top: 300px;
+
+}
+.my-custom-navbar {
+    background-color: #d67215; /* Azul escuro moderno */
+    padding: 15px 0;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+
+.brand-custom {
+    color: #ffffff !important;
+    font-weight: 700;
+    font-size: 1.5rem;
+}
+
+
+.nav-link-custom:hover, 
+.nav-link-custom.active {
+    color: #800202  
+}
+
+.custom-toggler {
+    border-color: rgba(255, 255, 255, 0.5) !important;
+}
+ 
