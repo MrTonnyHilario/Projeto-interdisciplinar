@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Entrar</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+<div class="d-flex justify-content-center align-items-center min-vh-100 p-3">
+  <div class="container meu-cadastro p-4 rounded shadow-sm" style="max-width:450px;">
+    <h1 class="text-white text-center mb-4">Entrar</h1>
+    <div class="alert alert-success" th:if="${param.cadastro != null}">Cadastro realizado! Agora entre com seu e-mail e senha.</div>
+    <div class="alert alert-danger" th:if="${erro != null}" th:text="${erro}"></div>
+    <form action="/login" method="post">
+      <div class="mb-3"><label for="email" class="form-label text-white">E-mail</label>
+        <input type="email" id="email" name="email" class="form-control" th:value="${emailDigitado}" autocomplete="email" required></div>
+      <div class="mb-3"><label for="senha" class="form-label text-white">Senha</label>
+        <input type="password" id="senha" name="senha" class="form-control" autocomplete="current-password" required></div>
+      <div class="d-grid gap-2 mt-4"><button type="submit" class="btn btn-primary btn-lg">Entrar</button>
+        <a href="/cadastro" class="btn btn-outline-light">Ainda não tenho conta</a>
+        <a href="/" class="text-white text-center">Voltar</a></div>
+    </form>
+  </div>
+</div>
+</body>
+</html>
