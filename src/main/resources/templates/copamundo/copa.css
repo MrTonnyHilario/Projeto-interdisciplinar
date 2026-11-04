@@ -28,7 +28,7 @@ body{
 }
 
 .my-custom-navbar {
-    background-color: #15d6d6;
+    background-color: #2615a8;
     padding: 15px 0;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
@@ -50,9 +50,15 @@ body{
     border-color: rgba(255, 255, 255, 0.5) !important;
 }
 #his{
-    width:100%;
+    width: 1505px;;
     height: 200px;
     background-color: #56089e;
+    border-radius: 25px;
+    /* margin-top: 10px; */
+    /* margin-bottom: 10px; */
+    margin: 10px;
+    
+    
 }
  
 #ano{
@@ -60,19 +66,17 @@ body{
     height: 500px;
     background-color: #800202;
     position: fixed;
+    border-radius: 25px;
+    margin-left: 10px;
 }
 
 .bloco {
-    width: 800px; /* Pode aumentar para testar; ele crescerá uniformemente para os dois lados */
-    max-width: calc(100% - 340px); /* Garante que ele nunca vai encostar ou sobrepor a div #ano (300px + 40px de folga) */
+    width: 900px; 
+    max-width: calc(100% - 340px); 
     height: 600px;
-    background-color: rgba(156, 151, 151, 0.514);
+    background-color: rgba(136, 11, 11, 0.319);
     box-sizing: border-box;
-    border-radius: 10px;
+    border-radius: 25px;
     display: flex;
-    align-items: center;
-    justify-content: center;
-    
-    /* As propriedades abaixo resolvem o problema: */
     margin-left: calc(300px + (100% - 300px - 800px) / 2); 
 }
