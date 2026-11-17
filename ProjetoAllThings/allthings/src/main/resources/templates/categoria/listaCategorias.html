@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Categorias</title>
+</head>
+<body>
+    <h1 style="text-align: center;">Lista de Categorias</h1>
+    <h3 style="text-align: center;">
+        <a href="/categorias/criar">Nova Categoria</a>
+    </h3>
+
+    <!--Tabela para exibir os clientes cadastrados-->
+    <table align="center" border="1">
+        <tr>
+            <td colspan="4" align="center">Lista de Categorias</td>
+        </tr>
+        <tr>
+            <th>Nome</th>
+            <th>Descrição</th>
+            <th colspan="2">Ações</th>
+        </tr>
+        <tr th:each="categoria : ${categorias}">
+            <td th:text="${categoria.nomeCategoria}"></td>
+            <td th:text="${categoria.descricaoCategoria}"></td>
+            <td>
+                <a th:href="@{/categorias/editar/{id}(id=${categoria.idCategoria})}">Editar</a>
+                <a th:href="@{/categorias/excluir/{id}(id=${categoria.idCategoria})}">Excluir</a>
+            </td>
+        </tr>
+    </table>
+    <p style="text-align: center;"><a th:href="@{/allthings}">Voltar</a></p> 
+</body>
+</html>

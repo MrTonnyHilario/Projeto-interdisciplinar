@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Acesso ao Sistema</title>
+</head>
+<body>
+    <h1 style="text-align: center;">Sistema AllThings</h1>
+    <p style="text-align: center;">Informe suas credenciais para acessar o sistema</p>
+
+    <p th:if="${param.error}">
+        Usuário ou senha inválidos. Tente novamente.
+    </p>
+    <p th:if="${param.logout}">
+        Logout efetuado com sucesso.
+    </p>
+    <form method="post" th:action="@{/login}">
+        <label for="username">Usuário:</label>
+        <input type="text" id="username" name="username">
+        <br /><br />
+        <label for="password">Senha:</label>
+        <input type="password" id="password" name="password">
+        <br /><br />
+        <button type="submit">Entar no Sistema</button>
+    </form>
+</body>
+</html>

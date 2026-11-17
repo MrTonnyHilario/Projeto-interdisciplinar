@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Produtos</title>
+</head>
+<body>
+    <h1 style="text-align: center;">Lista de Produtos</h1>
+    <h3 style="text-align: center;">
+        <a href="/produtos/criar">Novo Produto</a>
+    </h3>
+
+    <!--Tabela para exibir os produtos cadastrados-->
+    <table align="center" border="1">
+        <tr>
+            <td colspan="9" align="center">Lista de Produtos</td>
+        </tr>
+        <tr>
+            <th>Descrição</th>
+            <th>Marca</th>
+            <th>Modelo</th>
+            <th>Unidade</th>
+            <th>Valor</th>
+            <th>Categoria</th>
+            <th>Fornecedor</th>
+            <th colspan="2">Ações</th>
+        </tr>
+        <tr th:each="produto : ${produtos}">
+            <td th:text="${produto.descricaoProduto}"></td>
+            <td th:text="${produto.marcaProduto}"></td>
+            <td th:text="${produto.modeloProduto}"></td>
+            <td th:text="${produto.unidadeProduto}"></td>
+            <td th:text="${produto.valorProduto}"></td>
+            <td th:text="${produto.categoria.nomeCategoria}"></td>
+            <td th:text="${produto.fornecedor.nomeFornecedor}"></td>
+            <td>
+                <a th:href="@{/produtos/editar/{id}(id=${produto.idProduto})}">Editar</a>
+                <a th:href="@{/produtos/excluir/{id}(id=${produto.idProduto})}">Excluir</a>
+            </td>
+        </tr>
+    </table>    
+</body>
+</html>
