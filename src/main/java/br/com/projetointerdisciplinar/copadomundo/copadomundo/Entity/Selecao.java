@@ -10,6 +10,7 @@ import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
+import jakarta.persistence.ManyToOne;
 
 @Entity
 @NoArgsConstructor
@@ -41,6 +42,7 @@ public class Selecao{
     @Column(nullable=false, length=30)
     private String classificacaoSelecao;
 
+    @ManyToOne
     @JoinColumn(name="idPais_fk")
     private Pais pais;
 }

@@ -9,6 +9,9 @@ import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
+import jakarta.persistence.OneToMany;
+import java.util.List;
+import java.util.ArrayList;
 
 @Entity
 @NoArgsConstructor
@@ -29,6 +32,9 @@ public class Pais {
 
     @Column(nullable=false, length=2)
     private String siglaPais;
+
+    @OneToMany(mappedBy = "pais")
+private List<Selecao> selecoes = new ArrayList<>();
 
     //bandeira pais
 }

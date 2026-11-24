@@ -1,4 +1,4 @@
-package br.com.allthings.allthings.security;
+package br.com.projetointerdisciplinar.copadomundo.copadomundo.security;
 
 import java.util.Collection;
 import java.util.List;
@@ -7,7 +7,7 @@ import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 
-import br.com.allthings.allthings.entity.Usuario;
+import br.com.projetointerdisciplinar.copadomundo.copadomundo.Entity.Usuario;
 
 public class UserDetailsImpl implements UserDetails {
 

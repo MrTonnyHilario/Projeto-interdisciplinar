@@ -1,4 +1,4 @@
-package br.com.allthings.allthings.security;
+package br.com.projetointerdisciplinar.copadomundo.copadomundo.security;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.userdetails.UserDetails;
@@ -6,8 +6,8 @@ import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Service;
 
-import br.com.allthings.allthings.entity.Usuario;
-import br.com.allthings.allthings.repository.UsuarioRepository;
+import br.com.projetointerdisciplinar.copadomundo.copadomundo.Entity.Usuario;
+import br.com.projetointerdisciplinar.copadomundo.copadomundo.Repository.UsuarioRepository;
 
 @Service 
 public class UserDetailsServiceImpl implements UserDetailsService {
