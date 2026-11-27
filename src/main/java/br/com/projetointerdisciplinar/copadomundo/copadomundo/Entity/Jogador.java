@@ -14,7 +14,6 @@ import jakarta.persistence.ManyToOne;
 
 import java.time.LocalDate;
 
-import org.hibernate.annotations.ManyToAny;
 
 @Entity
 @NoArgsConstructor

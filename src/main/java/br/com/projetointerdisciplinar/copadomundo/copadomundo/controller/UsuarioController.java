@@ -23,10 +23,11 @@ public class UsuarioController {
     private UsuarioService usuarioService;
 
     @GetMapping("/criar")
-    public String criarForm(Model model) {
-        model.addAttribute("usuario", new Usuario());
-        return "usuario/formularioUsuario";
-    }
+public String criarForm(Model model) {
+    model.addAttribute("usuario", new Usuario());
+    return "possui";
+}
+    
 
     @PostMapping("/salvar")
     public String salvar(@ModelAttribute Usuario usuario) {

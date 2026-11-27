@@ -17,20 +17,24 @@ public class SecurityConfig {
         http
                 .csrf(csrf -> csrf.disable())
                 .authorizeHttpRequests(auth -> auth
-                .requestMatchers(
-                        "/",
-                        "/login",
-                        "/home",
-                        "/copadomundo",
-                        "/css/**",
-                        "/images/**",
-                        "/usuarios/**"
-                ).permitAll()
-                        .anyRequest().authenticated())
+    .requestMatchers(
+        "/",
+        "/login",
+        "/usuarios/criar",
+        "/usuarios/salvar",
+        "/css/**",
+        "/images/**",
+        "/fotos/**"
+    ).permitAll()
+    .anyRequest().authenticated())
                 .formLogin(form -> form
-                        .loginPage("/login")
-                        .defaultSuccessUrl("/home", true)
-                        .permitAll())
+                .loginPage("/login")
+                .loginProcessingUrl("/login")
+                .usernameParameter("loginUsuario")
+                .passwordParameter("senhaUsuario")
+                .defaultSuccessUrl("/home", true)
+                .failureUrl("/login?erro")
+                .permitAll())
                 .logout(logout -> logout
                         .logoutSuccessUrl("/login?logout")
                         .permitAll());
